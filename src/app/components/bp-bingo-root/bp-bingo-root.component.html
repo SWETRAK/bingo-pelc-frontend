@@ -1,0 +1,21 @@
+<h1>Bingo Pelc</h1>
+
+<div class="bingo-wrapper" *ngIf="dailyBingo && !dailyBingo.win">
+
+    <div *ngFor="let dailyQuestion of dailyBingo.dailyQuestions">
+        <app-bp-bingo-cell [dailyQuestion]="dailyQuestion" (update)="updateDailyQuestionStatus($event)"></app-bp-bingo-cell>
+    </div>
+
+</div>
+
+<div *ngIf="dailyBingo && dailyBingo.win">
+    <h1>Gratulacje wygrałeś</h1>
+</div>
+
+<div *ngIf="!dailyBingo">
+    <button (click)="onClickGenerateDailyBingo()">Generate Bingo</button>
+</div>
+
+
+
+<app-bp-logout></app-bp-logout>

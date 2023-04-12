@@ -1,0 +1,11 @@
+.bingo-cell {
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    inline-size: 100px;
+    overflow-style: auto;
+}
+
+.checked {
+    border: red 2px solid;
+}

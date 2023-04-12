@@ -1,0 +1,8 @@
+<div>
+    <form [formGroup]="this.form">
+        <input type="email" formControlName="email" name="email" required>
+        <input type="password" formControlName="password" name="password" required>
+
+        <input type="submit" (click)="onLoginClick()">
+    </form>
+</div>
