@@ -1,0 +1,14 @@
+<div>
+    <form [formGroup]="this.form">
+        <label for="email">Email:</label><br>
+        <input type="email" formControlName="email" name="email" id="email" required><br>
+
+        <label for="password">Password:</label><br>
+        <input type="password" formControlName="password" name="password" id="password" required><br>
+
+        <label for="nickname">Nickname:</label><br>
+        <input type="text" formControlName="nickname" name="nickname" id="nickname" required><br>
+
+        <input type="submit" (click)="onSignupClick()">
+    </form>
+</div>

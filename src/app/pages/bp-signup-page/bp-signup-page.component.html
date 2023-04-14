@@ -1,0 +1,8 @@
+<div *ngIf="!this.newUser">
+    <app-bp-signup-form (signup-data)="getNewUserInfo($event)" />
+</div>
+
+<div *ngIf="this.newUser">
+    Utworzono urzytkownika o email: {{this.newUser.email}} <br>
+    i nickname: {{this.newUser.nickname}}
+</div>

@@ -11,6 +11,8 @@ import { BpLoginPageComponent } from './pages/bp-login-page/bp-login-page.compon
 import { BpLoginFormComponent } from './components/bp-login-form/bp-login-form.component';
 import {ReactiveFormsModule} from "@angular/forms";
 import { BpLogoutComponent } from './components/bp-logout/bp-logout.component';
+import { BpSignupFormComponent } from './components/bp-signup-form/bp-signup-form.component';
+import { BpSignupPageComponent } from './pages/bp-signup-page/bp-signup-page.component';
 
 @NgModule({
     declarations: [
@@ -21,6 +23,8 @@ import { BpLogoutComponent } from './components/bp-logout/bp-logout.component';
         BpLoginPageComponent,
         BpLoginFormComponent,
         BpLogoutComponent,
+        BpSignupFormComponent,
+        BpSignupPageComponent,
     ],
     imports: [
         BrowserModule,

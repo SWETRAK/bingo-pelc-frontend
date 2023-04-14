@@ -4,6 +4,7 @@ import {BpDailyQuestion} from "../models/bp-daily-question";
 import {BpDailyBingo} from "../models/bp-daily-bingo";
 import {BpLoginWithEmailPass} from "../models/bp-login-with-email-pass";
 import {BpUserInfo} from "../models/bp-user-info";
+import {BpSignupWithEmailPass} from "../models/bp-signup-with-email-pass";
 
 @Injectable({
   providedIn: 'root'
@@ -17,6 +18,10 @@ export class BpHttpService {
 
     public loginUser(loginData: BpLoginWithEmailPass) {
         return this.http.post<BpUserInfo>("http://localhost:5093/auth/login", loginData, {withCredentials: true});
+    }
+
+    public registerUser(registerData: BpSignupWithEmailPass) {
+        return this.http.post<BpUserInfo>("http://localhost:5093/auth/register", registerData, {withCredentials: true});
     }
 
     public getUserInfo(){
